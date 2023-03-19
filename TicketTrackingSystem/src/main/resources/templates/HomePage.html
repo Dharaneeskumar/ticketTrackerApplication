@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en"   xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Welcome!!! </title>
+  <style>
+    body{
+      background-color: #F6E1C3;
+    }
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+   a{
+      margin: 0 20px;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #fff;
+      background-color: #0077cc;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    a:hover {
+      background-color: #005fa3;
+    }
+
+  </style>
+</head>
+<body>
+<div>
+<a th:href="@{/ticketPage/getAllTickets}">ADMIN</a>
+<a th:href="@{/ticketPage/createTicket}">USER</a>
+</div>
+</body>
+</html>

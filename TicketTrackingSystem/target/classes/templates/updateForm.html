@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en"   xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style>
+        body{
+            background-color: #F6E1C3;
+        }
+
+        div {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #E9A178;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            animation-name: slideIn;
+            animation-duration: 0.5s;
+        }
+
+        input, button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: none;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #3e8e41;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+<form th:action="@{/ticketPage/updateForm}" th:object="${ticket}">
+<input type="hidden" th:value="${ticket.id}"th:field="*{id}"/>
+    Title:<input type="text" th:value="${ticket.title}"th:field="*{title}"/>
+    Description:<input type="text" th:value="${ticket.description}"th:field="*{description}"/>
+    <input type="submit"/>
+</form>
+</div>
+</body>
+</html>

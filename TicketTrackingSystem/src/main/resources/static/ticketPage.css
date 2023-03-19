@@ -1,0 +1,117 @@
+/* Set font family and size for the entire page */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Style the table */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* Style the table header */
+thead {
+    background-color: #007bff; /* blue */
+    color: #fff;
+}
+
+/* Style the table header cells */
+th {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+/* Style the table body rows */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Style the table body cells */
+td {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+
+
+tbody tr:hover {
+    background-color: #ddd;
+}
+a{
+    margin-right: 20px;
+color: white;
+    letter-spacing: 2px;
+}
+input[type=text] {
+    display: inline;
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 30%;
+    background: #f1f1f1;
+}
+
+.logout{
+    float: right;
+    width: 10%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+}
+
+button {
+    display: inline;
+    float: left;
+    width: 10%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+}
+button:hover {
+    background: #0b7dda;
+}
+
+td a {
+
+    background-color: red;
+    padding: 10px;
+    display: inline;
+    text-decoration: none;
+    color: #0077cc;
+    padding: 5px;
+}
+
+td a:hover {
+    background-color: #0077cc;
+    color: #fff;
+}
+
+td a:first-child {
+    background-color: blue;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+td a:last-child {
+    background-color: yellow;
+    padding: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+td a:not(:first-child):not(:last-child) {
+    border-left: 1px solid #0077cc;
+    border-right: 1px solid #0077cc;
+}
+

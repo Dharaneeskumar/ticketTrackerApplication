@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en"   xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style>
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+            background-color: aquamarine;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        input[type="text"],
+        textarea {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            margin-bottom: 5px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .logout{
+            text-decoration: none;
+            margin-top: 5px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .logout:hover {
+            background-color: #0069d9;
+        }
+        input[type="submit"]:hover {
+            background-color: #0069d9;
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+  <form th:action="@{/ticketPage/updateTicket}" th:object="${ticket}" >
+    Title:<input type="text" th:field="*{title}"/>
+    Description:<textarea th:field="*{description}"/>
+    Content:<textarea th:field="*{content}"/>
+     <input type="submit"/>
+      <a class="logout"th:href="@{/logout}">LOGOUT</button></a>
+  </form>
+
+</div>
+</body>
+</html>
